@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A cozy storybook library with thirty original one-chapter stories.">
+  <title>PageTurn — Storybook Library</title><link rel="stylesheet" href="css/style.css">
+  <script src="js/stories.js" defer></script><script src="js/app.js" defer></script>
+</head>
+<body>
+<header class="site-header"><a class="brand" href="index.html" aria-label="PageTurn home"><span class="brand-mark">✦</span> PageTurn</a>
+<nav class="top-nav" aria-label="Main navigation"><a class="active" href="index.html">Discover</a><a href="#library">Library</a><a href="#about">About</a></nav>
+<div class="header-actions"><button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle theme">☾</button><a class="my-library" href="#library">My Library <span id="savedCount">0</span></a></div></header>
+<main>
+<section class="hero"><div class="hero-copy"><span class="eyebrow">YOUR NEXT FAVORITE READ</span><h1>Stories worth<br><em>getting lost in.</em></h1><p>Find a new world, meet unforgettable characters, and read a complete story in one sitting.</p><a class="primary-btn" href="#library">Explore stories <span>↘</span></a><div class="hero-stats"><div><strong>30</strong><span>original stories</span></div><div><strong>10+</strong><span>genres & moods</span></div><div><strong>1</strong><span>chapter each</span></div></div></div>
+<div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-book"><div class="book-spine"></div><span>THE ART OF<br><b>STORYTELLING</b></span><small>Every page, a new world.</small><i>✦</i></div><div class="floating-note note-one">✧ Find your next escape</div><div class="floating-note note-two">☕ Read at your pace</div></div></section>
+<section class="feature-strip"><div><span>✦</span><p><b>Curated reads</b><small>Stories across different genres</small></p></div><div><span>♡</span><p><b>Save your favorites</b><small>Your personal reading list</small></p></div><div><span>☼</span><p><b>Made for reading</b><small>Comfortable on every screen</small></p></div></section>
+<section id="library" class="library-section"><div class="section-heading"><div><span class="eyebrow">THE COLLECTION</span><h2>Explore the library</h2><p>Thirty stories. Thirty different worlds.</p></div><div class="results-count"><strong id="resultCount">30</strong> stories</div></div>
+<div class="toolbar"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search titles, authors, genres..." aria-label="Search stories"><kbd>⌘ K</kbd></label><select id="sortSelect" aria-label="Sort stories"><option value="featured">Featured</option><option value="title">Title A–Z</option><option value="author">Author A–Z</option></select></div>
+<div id="genreFilters" class="genre-filters" aria-label="Filter by genre"><button class="genre-chip selected" data-genre="All">All stories</button></div>
+<div id="storyGrid" class="story-grid" aria-live="polite"></div><div id="emptyState" class="empty-state" hidden><span>⌕</span><h3>No stories found</h3><p>Try another title or genre.</p><button id="clearFilters" class="secondary-btn">Clear filters</button></div>
+</section>
+<section id="about" class="about-section"><div class="about-icon">✦</div><div><span class="eyebrow">A LITTLE NOTE</span><h2>Every great adventure<br>starts with a page.</h2><p>PageTurn is a mini storybook library built for curious minds. Pick a cover, read a complete single-chapter story, and save the ones that stay with you.</p></div><a href="#library" class="text-link">Find a story <span>→</span></a></section>
+</main><footer><a class="brand" href="index.html"><span class="brand-mark">✦</span> PageTurn</a><span>Made for readers, one page at a time.</span><a href="#top" id="backToTop">Back to top ↑</a></footer>
+<div id="detailsModal" class="modal" aria-hidden="true"><div class="modal-backdrop" data-close-modal></div><section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" data-close-modal aria-label="Close details">×</button><img id="modalCover" src="" alt="Story cover"><div class="modal-info"><span id="modalGenre" class="eyebrow"></span><h2 id="modalTitle"></h2><p id="modalAuthor" class="muted"></p><p id="modalSynopsis"></p><div class="modal-actions"><button id="modalRead" class="primary-btn">Read story →</button><button id="modalSave" class="secondary-btn">♡ Save</button></div></div></section></div>
+</body></html>
